@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/img/20-icone-instagram-2.0.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function toggleButton() {
+            const username = document.querySelector('#username').value;
+            const password = document.querySelector('#password').value;
+
+            if (username && password) {
+                document.querySelector('#login').disabled = false;
+                return
+            }
+            document.querySelector('#login').disabled = true;
+        }
+    </script>
+    <title> Instagram</title>
+</head>
+<body>
+    <div class="instagram-wrapper">
+        <div class="instagram-phone">
+            <img src="./img/tela.png " class="instagram-phone" alt="celular">
+        </div>
+
+        <div class="instagram-continue">
+            <form action="" id="formulario" method="post" name="formulario" class="group-1">
+                  <img src="./img/instagram.png" class="instagram-logo" alt="instagram-logo">
+                <div class="text-password">
+                    <label class="sr-only" for="username">Usuário</label>
+                    <input class= "input-text" type="text" name="username" placeholder="Phone number, username, or email" required id="username" required onchange="toggleButton()"><br>
+                    <label class="sr-only" for="password">Senha</label>
+                    <input type="password" class="input-text" placeholder="password" name="password" id="password" required onchange="toggleButton()"><br>
+                </div>
+
+                    <button id="login" class="instagram-login" disabled>Log in</button>
+                <a href="#void" class="instagram-logout">Forgot password?</a>
+            </form>
+
+            <div class="group-1">
+                <p class="signup"> 
+                    Don't have an account?
+                    <a href="#void">
+                        <span class="link-blue">Sign up</span>
+                    </a>
+                </p>
+            </div>
+            
+            <div class="get-the-app">
+                <p class="get-app">Get the app</p>
+                <div class="download">
+                    <a href="https://apps.apple.com/app/instagram/id389801252?vt=lo" class="app-download" target="_blank"><span class="sr-only">Baixar instagram na app store</span></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D8082CB1C-342F-48B2-BD40-3A0D11BB52DB%26utm_content%3Dlo%26utm_medium%3Dbadge" class="app-download" target="_blank" rel="noopener noreferrer"><span class="sr-only">Baixar instagram na google play</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
